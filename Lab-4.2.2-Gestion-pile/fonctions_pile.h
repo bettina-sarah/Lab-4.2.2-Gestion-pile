@@ -18,13 +18,13 @@ const Action_s Sud = { "Sud" };
 const Action_s Est = { "Est" };
 const Action_s Ouest = { "Ouest" };
 
-//vector <Action_s> Pile;
 
-int TaillePile(vector <Action_s> &Vector);
-Action_s DernierElement(vector <Action_s> &Vector);
-void Empiler(vector <Action_s> &Vector, Action_s Orientation);
-Action_s Depiler(vector <Action_s>& Vector);
-void Vectorprint(vector <Action_s>& Vector);
+
+int TaillePile();
+Action_s DernierElement();
+void Empiler(Action_s &Orientation);
+Action_s Depiler();
+void Vectorprint();
 
 
 #endif

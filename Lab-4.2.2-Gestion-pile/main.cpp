@@ -7,46 +7,38 @@ using namespace std;
 
 void main(void)
 {
-	vector <Action_s> Pile;
 	vector <Action_s> Directions = { Est, Est, Est, Nord, Ouest, Ouest, Ouest };
 	
 	for (int i = 0; i < Directions.size(); i++)
 	{
-		Empiler(Pile, Directions[i]);
+		Empiler(Directions[i]);
 	}
 	
-	cout << TaillePile(Pile);
-	Vectorprint(Pile);
+	cout << TaillePile();
+	Vectorprint();
 	cout << "\n\n";
 
 	for (int i = 0; i < 5; i++)
 	{
-		Depiler(Pile);
+		Depiler();
 	}
 	
-	cout << TaillePile(Pile);
-	Vectorprint(Pile);
+	cout << TaillePile();
+	Vectorprint();
 
 	vector <Action_s> Directionss = { Sud, Ouest, Sud, Ouest, Nord};
 
 	for (int i = 0; i < Directionss.size(); i++)
 	{
-		Empiler(Pile, Directionss[i]);
+		Empiler(Directionss[i]);
 	}
 
 	for (int i = 0; i < 6; i++)
 	{
-		Depiler(Pile);
+		Depiler();
 	}
 	cout << "\n\nfinal pile\n\n";
-	cout << TaillePile(Pile);
-	Vectorprint(Pile);
-	
+	cout << TaillePile();
+	Vectorprint();
 
-	//cout<< "\nremoved: "<<Depiler(Pile).Action;
-	//cout << TaillePile(Pile);
-
-
-
-	
 }

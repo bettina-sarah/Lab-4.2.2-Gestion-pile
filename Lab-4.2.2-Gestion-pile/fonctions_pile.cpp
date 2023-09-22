@@ -5,34 +5,35 @@
 
 using namespace std;
 
-int TaillePile(vector <Action_s> &Vector)
+vector <Action_s> Pile;
+
+int TaillePile()
 {
-	return Vector.size();
+	return Pile.size();
 }
 
-Action_s DernierElement(vector <Action_s> &Vector) // qsq qui se passe si vect est vide (0) ??
+Action_s DernierElement() // qsq qui se passe si vect est vide (0) ??
 {
-	return Vector[TaillePile(Vector) - 1];
+	return Pile[TaillePile() - 1];
 	//if return quoi?
 }
 
-void Empiler(vector <Action_s> &Vector, Action_s Orientation) // only struct as parameter; vector global! CHANGE
+void Empiler(Action_s &Orientation) // only struct as parameter; vector global! CHANGE
 {
-	Vector.push_back(Orientation);
+	Pile.push_back(Orientation);
 }
 
-Action_s Depiler(vector <Action_s> &Vector) // pas de parametre !! a changer
+Action_s Depiler() // pas de parametre !! a changer
 {
-	Action_s LastAction = DernierElement(Vector);
-	Vector.pop_back();
+	Action_s LastAction = DernierElement();
+	Pile.pop_back();
 	return LastAction;
 }
 
-void Vectorprint(vector <Action_s>& Vector)
+void Vectorprint()
 {
-	for (int i = 0; i < Vector.size(); i++)
+	for (int i = 0; i < Pile.size(); i++)
 	{
-		cout << Vector[i].Action;
+		cout << Pile[i].Action;
 	}
-
 }
